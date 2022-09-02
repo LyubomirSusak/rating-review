@@ -1,0 +1,37 @@
+ <div class="review">
+  <div class="review__stars" style="&#45;&#45;rating: 4.7;" aria-label="Rating of this product is 4.7 out of 5."></div>
+  <div class="review__title">(40 reviews)</div>
+ </div>
+ 
+ 
+ 
+ .review {
+  display: flex;
+  align-items: center;
+
+  &__stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    font-family: "Poppins";
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    margin-right: 10px;
+
+    &:before {
+      content: '★ ★ ★ ★ ★';
+      background: linear-gradient(90deg, #000000 var(--percent), #ffffff var(--percent));
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 1px #000000;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__title {
+    font-family: "Poppins";
+    font-size: 12px;
+    line-height: 14px;
+    color: #616657;
+    letter-spacing: 0.04em;
+  }
+
+}
